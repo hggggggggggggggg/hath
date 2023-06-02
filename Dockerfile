@@ -1,6 +1,6 @@
-FROM openjdk:8-jre-alpine
+FROM amazoncorretto:8-alpine-jdk
 
-LABEL maintainer wizfrk <wizfrk@gmail.com>
+LABEL maintainer hgg <>
 
 ENV HATH_PORT 6969
 
@@ -9,7 +9,7 @@ RUN apk add --no-cache --update \
     tzdata \
  && update-ca-certificates
 
-ARG HATH_VERSION=1.4.2
+ARG HATH_VERSION=1.6.1
 
 RUN apk add --no-cache --update --virtual build-dependencies wget unzip && \
     wget -O /tmp/hath-$HATH_VERSION.zip https://repo.e-hentai.org/hath/HentaiAtHome_$HATH_VERSION.zip && \
@@ -20,6 +20,8 @@ RUN apk add --no-cache --update --virtual build-dependencies wget unzip && \
     apk del build-dependencies
 
 ADD run/* /opt/hath/
+
+RUN chmod +x /opt/hath/start.sh
 
 WORKDIR /hath
 

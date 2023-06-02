@@ -1,11 +1,14 @@
-version: "2"
+version: "3"
 
 services:
   hath:
-    build: .
+    image: hgggg/hath:latest
+    #Uncomment to build the image locally
+    # build: .
     container_name: hath
     restart: unless-stopped
-    ports: <port>:6969
+    ports: 
+      - '<port>:6969'
     environment:
       # User and Group ID's - https://kb.iu.edu/d/adwf
       - PUID=1001
