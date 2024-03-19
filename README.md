@@ -7,7 +7,7 @@ Forked from https://github.com/wizfrk/hath
 
 ![e-hentai.org banner](https://forums.e-hentai.org/uploads/post-2104618-1420415820.png)
 
-Hentai@Home (H@H) is a Peer-2-Peer gallery distribution system which reduces the load on the E-Hentai Galleries. Current version: 1.6.1
+Hentai@Home (H@H) is a Peer-2-Peer gallery distribution system which reduces the load on the E-Hentai Galleries. Current version: 1.6.2
 
 H@H is a project that can be compared to a cross between the SETI@home project and BitTorrent.
 
@@ -29,7 +29,7 @@ docker run \
   -v /path/to/your/hath/tmp:/hath/tmp \
   -e HATH_KEY=YOUR_HATH_CLIENT_ID:YOUR_HATH_CLIENT_KEY \
   -e TZ=YOUR_TIMEZONE \
-  wizfrk/hath
+  hgggg/hath
 ```
 
 ## Parameters
