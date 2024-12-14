@@ -6,7 +6,7 @@ services:
     #Uncomment to build the image locally
     # build: .
     container_name: hath
-    restart: unless-stopped
+    restart: no
     ports: 
       - '<port>:6969'
     environment:
